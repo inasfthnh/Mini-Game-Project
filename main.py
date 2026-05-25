@@ -93,9 +93,8 @@ def run_game() -> None:
         player.record("Suit Jawa", suit_game)
         save_player(player.player_no, suit_game)
 
-    display_playersboard()
-
     if list_player("survived"):
+        display_playersboard()
         if play_continue():
             print("\n  ✅  Players Survived advances to Round 2!\n")
         else:
@@ -116,9 +115,8 @@ def run_game() -> None:
         player.record("Bekel Challenge", bekel_game)
         save_player(player.player_no, bekel_game)
 
-    display_playersboard()
-
     if list_player("survived"):
+        display_playersboard()
         if play_continue():
             print("\n  ✅  Players Survived advances to Round 3!\n")
         else:
@@ -138,8 +136,6 @@ def run_game() -> None:
         engklek_game  = EngklekSurvival(player.player_no).play()
         player.record("Engklek Survival", engklek_game)
         save_player(player.player_no, engklek_game)
-
-    display_playersboard()
 
     if list_player("survived"):
         print("\n  🏆  Congratulations for all winners!\n")
