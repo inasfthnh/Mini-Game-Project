@@ -45,7 +45,8 @@ def reset_registry() -> None:
 
 def save_player(player: int, win: bool) -> None:
     if win:
-        players_survived.append(player)
+        if player not in players_survived:
+            players_survived.append(player)
     else:
         if player in players_survived:
             players_survived.remove(player)
@@ -64,7 +65,7 @@ def list_player(check: str) -> list:
     return ls
 
 def display_playersboard() -> None:
-    if not players_survived:
+    if not players_survived and not players_eliminated:
         data = players_registered
     else:
         data = players_survived
@@ -96,7 +97,7 @@ def display_summary() -> None:
     else:
         for player in data:
                 print(f"  {player}  \n")
-        print("=" * 45)
+        print("=" * 40)
         print("  TOTAL MONEY PRIZE FOR EACH PLAYER :")
         print("       Rp", (530633520000/len(data)))
         print("  ", "💸" * 15)

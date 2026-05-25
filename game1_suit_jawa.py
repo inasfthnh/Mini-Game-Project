@@ -96,7 +96,7 @@ class SuitJawa:
             return "lose"
 
     def finish(self) -> bool:
-        print("\n" + "─" * 43)
+        print("\n" + "─" * 55)
         if self.player_wins >= ROUNDS_TO_WIN:
             print(f"  🎉  Player {self.player_no} WINS the Suit Jawa match!")
             self.status = True
@@ -105,7 +105,7 @@ class SuitJawa:
             self.status = False
 
         print(f"  Final: Player [{self.player_no}] {self.player_wins} - {self.computer_wins} Budi  |  Ties: {self.ties}")
-        print("─" * 43)
+        print("─" * 55)
         return self.status
 
     def print_intro() -> None:

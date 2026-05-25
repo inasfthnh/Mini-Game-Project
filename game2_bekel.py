@@ -18,7 +18,7 @@ BEKEL_ITEMS = [
     "Daun"       # leaf
 ]
 
-MAX_LEVELS   = 2    # sequence grows up
+MAX_LEVELS   = 5    # sequence grows up
 LIVES        = 2    # mistakes allowed before elimination
 
 
@@ -89,7 +89,7 @@ class BekelChallenge:
             return False
 
     def show_sequence(self) -> None:
-        display_time = max(1.5, 1 * len(self.sequence))   # longer = more time
+        display_time = max(1.5, 0.8 * len(self.sequence))   # longer = more time
 
         print("  📿  MEMORIZE the sequence: \n")
         # Build a numbered display
@@ -100,7 +100,7 @@ class BekelChallenge:
         time.sleep(display_time)
 
         # "Clear" the screen with blank lines so they can't peek
-        print("\n" * 5)
+        print("\n" * 30)
         print("  🔲 " * 12)
         print("  Sequence hidden! What was it?\n")
 

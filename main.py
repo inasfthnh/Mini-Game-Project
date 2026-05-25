@@ -74,7 +74,7 @@ def play_continue() -> bool:
                 print(f"  ❌  Player {player_no} want to stop the game!")
             else:
                 print("  ⚠️  Please choose (Y / N).")
-    if voting > len(list_player("survived")) // 2:
+    if voting >= len(list_player("survived")) // 2:
         return True
     else: 
         return False
@@ -87,11 +87,17 @@ def run_game() -> None:
     # ── ROUND 1: Suit Jawa ──
     show_round_transition(1, "Suit Jawa")
     SuitJawa.print_intro()
+    print(list_player("survived"))
+    print(list_player("eliminated"))
+    print(list_player("registered"))
     for player_no in list_player("registered"):
         player = Player(player_no)
         suit_game = SuitJawa(player.player_no).play()
         player.record("Suit Jawa", suit_game)
         save_player(player.player_no, suit_game)
+        print(list_player("survived"))
+        print(list_player("eliminated"))
+        print(list_player("registered"))
 
     display_playersboard()
 
@@ -115,6 +121,9 @@ def run_game() -> None:
         bekel_game = BekelChallenge(player.player_no).play()
         player.record("Bekel Challenge", bekel_game)
         save_player(player.player_no, bekel_game)
+        print(list_player("survived"))
+        print(list_player("eliminated"))
+        print(list_player("registered"))
 
     display_playersboard()
 
@@ -138,6 +147,9 @@ def run_game() -> None:
         engklek_game  = EngklekSurvival(player.player_no).play()
         player.record("Engklek Survival", engklek_game)
         save_player(player.player_no, engklek_game)
+        print(list_player("survived"))
+        print(list_player("eliminated"))
+        print(list_player("registered"))
 
     display_playersboard()
 

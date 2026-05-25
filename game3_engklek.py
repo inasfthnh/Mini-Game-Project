@@ -91,9 +91,9 @@ class EngklekSurvival:
                 safe = row["safe"]
                 left  = SAFE_SYMBOL  if safe == "L" else CRACK_SYMBOL
                 right = SAFE_SYMBOL  if safe == "R" else CRACK_SYMBOL
-                print(f"  ║  {row_label}:  {left}  {right}   ◀️  ║")
+                print(f"  ║   {row_label}:    {left}      {right}   ◀   ║")
             else:
-                print(f"  ║  {row_label}:  {UNKNOWN_LEFT}  {UNKNOWN_RIGHT}  ║")
+                print(f"  ║   {row_label}:  {UNKNOWN_LEFT}  {UNKNOWN_RIGHT}   ║")
 
         print("  ╠══════════════════════════╣")
         print("  ║         🏁  START        ║")
@@ -116,7 +116,7 @@ class EngklekSurvival:
         if self.alive:
             print(f"  🎊  Player {self.player_no} crossed all {NUM_ROWS} rows!")
         else:
-            print(f"  Row reached: {self.current_row + 1} / {NUM_ROWS}")
+            print(f"  Row reached: {self.current_row} / {NUM_ROWS}")
         print("─" * 45)
         return self.status
 
