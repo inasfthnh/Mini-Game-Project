@@ -128,7 +128,7 @@ class BekelChallenge:
 
     def print_intro() -> None:
         print("\n" + "╔" + "═" * 43 + "╗")
-        print("║       🎯  ROUND 2 - BEKEL CHALLENGE           ║")
+        print("║       🎯  ROUND 2 - BEKEL CHALLENGE       ║")
         print("╚" + "═" * 43 + "╝")
         print(f"""
   A sequence of bekel items will flash before you.

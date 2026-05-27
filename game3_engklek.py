@@ -85,13 +85,13 @@ class EngklekSurvival:
                 safe = row["safe"]
                 left  = SAFE_SYMBOL  if safe == "L" else CRACK_SYMBOL
                 right = SAFE_SYMBOL  if safe == "R" else CRACK_SYMBOL
-                print(f"  ║  {row_label}:  {left}  {right}      ║")
+                print(f"  ║   {row_label}:         {left}            {right}  ◀  ║")
             elif i == self.current_row and i < reveal_up_to:
                 # Currently being revealed
                 safe = row["safe"]
                 left  = SAFE_SYMBOL  if safe == "L" else CRACK_SYMBOL
                 right = SAFE_SYMBOL  if safe == "R" else CRACK_SYMBOL
-                print(f"  ║   {row_label}:    {left}      {right}   ◀   ║")
+                print(f"  ║   {row_label}:         {left}            {right}  ◀  ║")
             else:
                 print(f"  ║   {row_label}:  {UNKNOWN_LEFT}  {UNKNOWN_RIGHT}   ║")
 
@@ -122,7 +122,7 @@ class EngklekSurvival:
 
     def print_intro() -> None:
         print("\n" + "╔" + "═" * 43 + "╗")
-        print("║     🦘  ROUND 3 - ENGKLEK SURVIVAL          ║")
+        print("║      🦘  ROUND 3 - ENGKLEK SURVIVAL       ║")
         print("╚" + "═" * 43 + "╝")
         print(f"""
   Hop across {NUM_ROWS} rows of tiles.

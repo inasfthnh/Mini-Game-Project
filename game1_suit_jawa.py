@@ -109,9 +109,9 @@ class SuitJawa:
         return self.status
 
     def print_intro() -> None:
-        print("\n" + "╔" + "═" * 52 + "╗")
+        print("\n" + "╔" + "═" * 48 + "╗")
         print("║   🎮  ROUND 1 - SUIT JAWA (GAJAH-ORANG-SEMUT)  ║")
-        print("╚" + "═" * 52 + "╝")
+        print("╚" + "═" * 48 + "╝")
         print("""
   Rules:
     🐘 Gajah  beats  👤 Orang  (elephant crushes human)

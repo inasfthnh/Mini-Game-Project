@@ -29,7 +29,7 @@ def print_banner() -> None:
 ║   Your fate now depends on your skill.            ║
 ║   Survive all rounds to win Rp 530,633,520,000!   ║
 ║                                                   ║
-║                     ⭕ 🔺 🟥                       ║
+║                     ⭕ 🔺 🟥                      ║
 ╚═══════════════════════════════════════════════════╝
 """
     print(banner)
